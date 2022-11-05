@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+
+    {{!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('#myTable').DataTable({
+            serverSide: true,
+            ajax: '/table',
+            type: 'get'
+        });
+    </script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Informations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="/city/createhbs">
+            <button class="btn btn-primary me-md-2" type="button">ADD</button>
+        </a>
+    </div>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item ">
+                <a class="page-link" href="/city/table" tabindex="-1">Previous</a>
+            </li>
+           <li  id="myPage" class="page-item"><a class="page-link" href="/city/table/1">1</a></li> 
+            <li class="page-item">
+                <a class="page-link" href="/city/table/4">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--
+    <table style="width:100%" class="table table-dark table-striped">
+        <tr class="w-25">
+            <td>ID</td>
+            <td>Name</td>
+            <td>CountryCode</td>
+            <td>District</td>
+            <td>Population</td>
+        </tr>
+        <tr>
+            {{#each users}}
+        <tr class="w-25">
+            <td>
+                {{this.ID}}
+            </td>
+            <td>
+                {{this.Name}}
+            </td>
+            <td>
+                {{this.CountryCode}}
+            </td>
+            <td>
+                {{this.District}}
+            </td>
+            <td>
+                {{this.Population}}
+            </td>
+        </tr>
+        {{/each}}
+        </tr>
+    </table>
+
+   -->
+    <table id="myTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="th-sm">ID
+
+                </th>
+                <th class="th-sm">Name
+
+                </th>
+                <th class="th-sm">CountryCode
+
+                </th>
+                <th class="th-sm">District
+
+                </th>
+                <th class="th-sm">Population
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{#each users}}
+            <tr class="w-25">
+                <td>
+                    {{this.ID}}
+                </td>
+                <td>
+                    {{this.Name}}
+                </td>
+                <td>
+                    {{this.CountryCode}}
+                </td>
+                <td>
+                    {{this.District}}
+                </td>
+                <td>
+                    {{this.Population}}
+                </td>
+            </tr>
+            {{/each}}
+            </tr>
+        </tbody>
+    </table>
+
+    {{!--
+    <script type="text/javascript" charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script> --}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!--<script>
+
+    $(document).ready{function({
+       $ ('#mytable').Datatable();
+
+    })};
+</Script>  -->
+
+
+<!--<table style="width:100%" class="table table-striped">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>CountryCode</td>
+    <td>District</td>
+    <td>Population</td>
+  </tr>
+  <tr>
+   {{#each users}} 
+      <tr>
+        <td>
+          {{this.ID}}
+        </td>
+        <td>
+          {{this.Name}}
+        </td>
+        <td>
+          {{this.CountryCode}}
+        </td>
+        <td>
+          {{this.District}}
+        </td>
+        <td>
+          {{this.Population}}
+        </td>
+      </tr>
+   {{/each}} 
+  </tr>
+</table>
+-->
