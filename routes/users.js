@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  /*let a = {
-    name:'askhay',
-    lastName : 'yadav'
+  let a = {
+    name:'adarsh',
+    lastName : 'tiwari'
   }
-  res.send(a);*/
-  res.render('index', { title: 'Users' });
+  res.json(a);
+  // res.render('index', { title: 'Users' });
 
 });
 
